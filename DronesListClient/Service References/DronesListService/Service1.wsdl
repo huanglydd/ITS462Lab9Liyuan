@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:60595/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:60595/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetManufacturerList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetManufacturerList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetManufacturerList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetManufacturerListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetModelSizeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetModelSizeList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetModelSizeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetModelSizeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDrones_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDrones" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDrones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDronesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDroneById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDroneById" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDroneById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDroneByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDronesByManufacturerId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDronesByManufacturerId" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDronesByManufacturerId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDronesByManufacturerIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDronesByModelSizeId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDronesByModelSizeId" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDronesByModelSizeId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDronesByModelSizeIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetManufacturerList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetManufacturerList" message="tns:IService1_GetManufacturerList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetManufacturerListResponse" message="tns:IService1_GetManufacturerList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModelSizeList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetModelSizeList" message="tns:IService1_GetModelSizeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetModelSizeListResponse" message="tns:IService1_GetModelSizeList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDrones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDrones" message="tns:IService1_GetDrones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDronesResponse" message="tns:IService1_GetDrones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDroneById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDroneById" message="tns:IService1_GetDroneById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDroneByIdResponse" message="tns:IService1_GetDroneById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDronesByManufacturerId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDronesByManufacturerId" message="tns:IService1_GetDronesByManufacturerId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDronesByManufacturerIdResponse" message="tns:IService1_GetDronesByManufacturerId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDronesByModelSizeId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDronesByModelSizeId" message="tns:IService1_GetDronesByModelSizeId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDronesByModelSizeIdResponse" message="tns:IService1_GetDronesByModelSizeId_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetManufacturerList">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetManufacturerList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModelSizeList">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetModelSizeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrones">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDrones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDroneById">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDroneById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDronesByManufacturerId">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDronesByManufacturerId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDronesByModelSizeId">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDronesByModelSizeId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:60595/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
